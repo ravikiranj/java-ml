@@ -31,5 +31,8 @@ public class Demo {
         TFIDF t = new TFIDF(corpusVocabulary);
         List<TermScore> termScores = t.getTFIDFScoresForDocument(testStrings);
         System.out.println(termScores);
+
+        YelpReviewParser yelpReviewParser = new YelpReviewParser();
+        System.out.println(yelpReviewParser);
     }
 }
