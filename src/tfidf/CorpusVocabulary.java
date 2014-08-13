@@ -41,18 +41,18 @@ public class CorpusVocabulary
 
 	private void _add(String word)
     {
-		Integer actualCount = m_wordCounts.get(word);
-		if (actualCount == null)
+        Integer actualCount = m_wordCounts.get(word);
+        if (actualCount == null)
         {
-			actualCount = 1;
+            actualCount = 1;
             m_vocabSize += 1;
-		}
+        }
         else
         {
-			actualCount += 1;
-		}
-		m_wordCounts.put(word, actualCount);
-	}
+            actualCount += 1;
+        }
+        m_wordCounts.put(word, actualCount);
+    }
 
     static class Builder
     {

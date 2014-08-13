@@ -12,3 +12,6 @@ hs_err_pid*
 
 # Output directory
 out/
+
+# Ignore workspace
+.idea/workspace.xml
