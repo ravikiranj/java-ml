@@ -1,5 +1,8 @@
 package tfidf;
 
+import com.google.common.base.Objects;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,13 +11,13 @@ import java.util.Map;
 /**
  * CorpusVocabulary - Load Corpus
  */
-public class CorpusVocabulary
+public class CorpusVocabulary implements Serializable
 {
     private Map<String, Integer> m_wordCounts;
 	private Integer m_vocabSize = 0;
     private Integer m_numDocuments = 0;
 
-	private CorpusVocabulary(List<List<String>> documents)
+	public CorpusVocabulary(List<List<String>> documents)
     {
         m_wordCounts = new HashMap<>();
         for (List<String> document : documents)
@@ -52,6 +55,15 @@ public class CorpusVocabulary
             actualCount += 1;
         }
         m_wordCounts.put(word, actualCount);
+    }
+
+    @Override
+    public String toString() {
+        return Objects.toStringHelper(this)
+                .add("m_wordCounts", m_wordCounts)
+                .add("m_vocabSize", m_vocabSize)
+                .add("m_numDocuments", m_numDocuments)
+                .toString();
     }
 
     static class Builder
