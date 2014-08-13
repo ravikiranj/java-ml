@@ -39,7 +39,7 @@ public class CorpusVocabulary
         return Math.log(m_numDocuments / (1 + termFreqInAllDocs.doubleValue()));
     }
 
-	private void _add(String word)
+    private void _add(String word)
     {
         Integer actualCount = m_wordCounts.get(word);
         if (actualCount == null)
