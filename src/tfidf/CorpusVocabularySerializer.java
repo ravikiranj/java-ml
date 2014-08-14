@@ -12,8 +12,8 @@ import java.io.ObjectOutputStream;
  * @since Aug 2014
  */
 public class CorpusVocabularySerializer {
-    private static final String DATASETS_DIR = "/home/rjanardhana/datasets/";
-    private static final String SERIALIZED_CORPUS_VOCAB_FILEPATH = DATASETS_DIR + "corpus_vocab.ser";
+    private static final String DATASETS_DIR = "/home/rjanardhana/datasets";
+    private static final String SERIALIZED_CORPUS_VOCAB_FILEPATH = DATASETS_DIR + "/corpus_vocab_trip.ser";
 
     public void serializeCorpusVocabulary(CorpusVocabulary corpusVocabulary)
     {
@@ -34,9 +34,9 @@ public class CorpusVocabularySerializer {
 
     public static void main(String[] args)
     {
-        YelpReviewParser yelpReviewParser = new YelpReviewParser();
-        CorpusVocabulary corpusVocabulary = new CorpusVocabulary(yelpReviewParser.getReviews());
+        TripAdvisorReviewParser tripAdvisorReviewParser = new TripAdvisorReviewParser();
+        CorpusVocabulary corpusVocabulary = new CorpusVocabulary(tripAdvisorReviewParser.getReviews());
         CorpusVocabularySerializer corpusVocabularySerializer = new CorpusVocabularySerializer();
-        //corpusVocabularySerializer.serializeCorpusVocabulary(corpusVocabulary);
+        corpusVocabularySerializer.serializeCorpusVocabulary(corpusVocabulary);
     }
 }

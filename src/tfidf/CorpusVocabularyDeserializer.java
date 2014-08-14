@@ -12,8 +12,8 @@ import java.io.ObjectInputStream;
  * @since Aug 2014
  */
 public class CorpusVocabularyDeserializer {
-    private static final String DATASETS_DIR = "/home/rjanardhana/datasets/";
-    private static final String SERIALIZED_CORPUS_VOCAB_FILEPATH = DATASETS_DIR + "corpus_vocab.ser";
+    private static final String DATASETS_DIR = "/home/rjanardhana/datasets";
+    private static final String SERIALIZED_CORPUS_VOCAB_FILEPATH = DATASETS_DIR + "/corpus_vocab_trip.ser";
 
     public CorpusVocabulary deserializeCorpusVocabulary()
     {

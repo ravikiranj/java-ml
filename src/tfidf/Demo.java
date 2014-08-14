@@ -32,7 +32,9 @@ public class Demo {
         List<TermScore> termScores = t.getTFIDFScoresForDocument(testStrings);
         System.out.println(termScores);
 
-        YelpReviewParser yelpReviewParser = new YelpReviewParser();
-        System.out.println(yelpReviewParser);
+        //YelpReviewParser yelpReviewParser = new YelpReviewParser();
+        //System.out.println(yelpReviewParser);
+        TripAdvisorReviewParser tripAdvisorReviewParser = new TripAdvisorReviewParser();
+        System.out.println(tripAdvisorReviewParser);
     }
 }
